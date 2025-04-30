@@ -79,4 +79,9 @@ public class ViewHome {
     public String getPlayerNewBetAmount(){ return betAmountTextField.getText(); }
 
     public void setLogButtonText(String value){ logButton.setText(value); }
+
+    public void visible(boolean visible) {
+        jframe.setVisible(visible);
+    }
+
 }

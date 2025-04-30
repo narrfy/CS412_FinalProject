@@ -9,6 +9,7 @@ public class ViewLogin {
     // Top
     private JPanel jpanelTop;
     private JButton homeButton;
+    private JButton createAccButton;
 
     // Middle
     private JPanel jpanelMiddle;
@@ -27,6 +28,8 @@ public class ViewLogin {
         // Top
         jpanelTop = new JPanel();
         homeButton = new JButton("HOME");
+        loginButton = new JButton("LOGIN");
+        createAccButton = new JButton("Create Account");
 
         // Middle
         jpanelMiddle = new JPanel();
@@ -39,7 +42,7 @@ public class ViewLogin {
         passwordLabel = new JLabel("Password:");
         passwordTextField = new JTextField();
         passwordTextField.setColumns(20);
-        loginButton = new JButton("LOGIN");
+
     }
 
     public void initaltizeGUI(){
@@ -47,6 +50,7 @@ public class ViewLogin {
 
         // Top
         jpanelTop.add(homeButton, BorderLayout.EAST);
+        jpanelTop.add(createAccButton, BorderLayout.CENTER);
         jpanelTop.add(loginButton, BorderLayout.WEST);
 
         // Middle
@@ -57,7 +61,6 @@ public class ViewLogin {
         jpanelBottom.add(passwordLabel, BorderLayout.EAST);
         jpanelBottom.add(passwordTextField, BorderLayout.CENTER);
 
-
         // Frame Setup
         jframe.add(jpanelTop, BorderLayout.NORTH);
         jframe.add(jpanelMiddle, BorderLayout.CENTER);
@@ -66,10 +69,14 @@ public class ViewLogin {
     }
 
     public void addActionListenerHomeButton(ActionListener al){ homeButton.addActionListener(al); }
+    public void addActionListenerCreateAccButton(ActionListener al){ createAccButton.addActionListener(al); }
     public void addActionListenerLoginButton(ActionListener al){ loginButton.addActionListener(al); }
 
     public String getPlayerCreatedUsername(){ return usernameTextField.getText(); }
     public String getPlayerCreatedPassword(){ return passwordTextField.getText(); }
 
+    public void visible(){
+        jframe.dispose();
+    }
 
 }

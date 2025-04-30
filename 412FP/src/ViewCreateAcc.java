@@ -71,5 +71,7 @@ public class ViewCreateAcc {
     public String getPlayerCreatedUsername(){ return usernameTextField.getText(); }
     public String getPlayerCreatedPassword(){ return passwordTextField.getText(); }
 
-
+    public void visible(){
+        jframe.dispose();
+    }
 }

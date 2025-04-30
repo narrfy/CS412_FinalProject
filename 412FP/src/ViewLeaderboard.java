@@ -54,4 +54,8 @@ public class ViewLeaderboard {
         // Set the data of the top 3 players into the JList
     }
 
+    public void visible(){
+        jframe.dispose();
+    }
+
 }
